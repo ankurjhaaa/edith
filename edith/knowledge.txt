@@ -1,0 +1,768 @@
+HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of a web page semantically. 
+Common HTML elements include <div> for divisions, <span> for inline elements, <a> for links, and <img> for images. 
+Semantic HTML refers to using HTML tags that convey the meaning of the content, such as <header>, <nav>, <main>, <footer>, <article>, and <section>. This is crucial for accessibility and SEO.
+The <!DOCTYPE html> declaration is used to inform the browser about the version of HTML being used. HTML5 is the current standard.
+The <head> section contains metadata about the document, such as the <title>, <meta> tags, and links to CSS files. The <body> section contains the actual visible content.
+HTML forms use <form>, <input>, <textarea>, and <button> to collect user data. The 'action' attribute defines where to send data, and 'method' defines the HTTP method (GET or POST).
+
+CSS (Cascading Style Sheets) is used for describing the presentation of a document written in HTML. It controls layout, colors, fonts, and overall aesthetics.
+CSS selectors are used to target HTML elements. Common selectors include element selectors (p), class selectors (.btn), ID selectors (#header), and attribute selectors ([type="text"]).
+The Box Model is a core concept in CSS, consisting of margins, borders, padding, and the actual content. Understanding the box model is essential for layout control.
+Flexbox (Flexible Box Layout) is a one-dimensional layout method for arranging items in rows or columns. It uses properties like justify-content, align-items, and flex-direction.
+CSS Grid Layout is a two-dimensional system for creating complex layouts with rows and columns. It uses properties like grid-template-columns and grid-gap.
+Responsive design is achieved using Media Queries (@media), which allow different styles to be applied based on screen size or device type.
+CSS variables (Custom Properties) allow you to store values and reuse them throughout your stylesheet using the var() function.
+Animations in CSS are created using @keyframes and the 'animation' property. Transitions allow for smooth changes between state changes.
+
+JavaScript (JS) is a high-level, interpreted programming language that enables interactive web pages. It is an essential part of web applications.
+JavaScript variables can be declared using var, let, or const. 'let' and 'const' are block-scoped, while 'var' is function-scoped. 'const' is used for values that should not change.
+Functions are blocks of code designed to perform a particular task. Arrow functions (() => {}) provide a concise syntax and handle the 'this' keyword differently.
+The DOM (Document Object Model) is a programming interface for web documents. JavaScript uses it to dynamically access and update the content, structure, and style of a document.
+DOM manipulation methods include document.getElementById(), document.querySelector(), element.addEventListener(), and element.innerHTML.
+Asynchronous JavaScript is handled using Callbacks, Promises, and the modern Async/Await syntax. This is essential for fetching data from APIs without blocking the main thread.
+ES6 (ECMAScript 2015) introduced many features like Template Literals, Destructuring, Spread/Rest operators, and Classes.
+JavaScript objects are collections of related data and functionality. JSON (JavaScript Object Notation) is a lightweight format for storing and transporting data.
+Event listeners in JavaScript allow you to respond to user actions like clicks, scrolls, key presses, and form submissions.
+The 'fetch' API is used to make network requests to retrieve resources from a server. It returns a promise that resolves into a Response object.
+
+Web Performance involves optimizing load times and interactivity. Techniques include minifying CSS/JS, optimizing images, and using lazy loading.
+Cross-browser compatibility ensures that a website looks and works correctly across different browsers like Chrome, Firefox, Safari, and Edge.
+Accessibility (A11y) means making websites usable for everyone, including people with disabilities. Using ARIA labels and semantic HTML is a key part of this.
+Security in web development involves protecting against attacks like XSS (Cross-Site Scripting) and CSRF (Cross-Site Request Forgery).
+
+AI integration in web apps often involves using Python backends with Django or FastAPI to serve machine learning models created with Scikit-learn or PyTorch.
+In this project, Edith uses Scikit-learn's TF-IDF Vectorizer to understand your questions and retrieve relevant context from this very knowledge base.
+Cosine Similarity is the mathematical engine that helps Edith decide which part of the HTML, CSS, or JS knowledge is most relevant to your specific question.
+If Edith cannot find a good match in the knowledge base, it will inform you that its neural network is still learning that specific topic.
+By continuously adding more raw text to this file, you are effectively "training" Edith to become smarter and more knowledgeable about web development.
+Modern development workflows often use tools like Vite, Webpack, or Babel to compile and bundle modern JavaScript for production environments.
+Tailwind CSS provides utility classes like 'bg-blue-500', 'p-4', and 'flex' to speed up the styling process while maintaining full design control.
+Responsive design patterns include Fluid Grids, Flexible Images, and Media Queries to ensure a seamless experience on mobile, tablet, and desktop.
+Progressive Web Apps (PWAs) use service workers and manifests to provide an app-like experience in the browser, including offline capabilities.
+Single Page Applications (SPAs) use frameworks like React, Vue, or Angular to provide smooth, app-like navigation without full page reloads.
+Server-Side Rendering (SSR) and Static Site Generation (SSG) are techniques used to improve SEO and performance by rendering pages on the server before sending them to the client.
+State management in complex apps is often handled by libraries like Redux, Vuex, or the Context API in React to keep data consistent across components.
+Web APIs like Geolocation, LocalStorage, and WebSockets provide powerful capabilities for building modern, interactive web experiences.
+LocalStorage allows web applications to store data locally within the user's browser, persisting even after the browser is closed.
+WebSockets provide a persistent connection between client and server for real-time, bi-directional communication, useful for chat apps and live updates.
+Error handling in JavaScript is done using try...catch blocks to prevent the application from crashing when unexpected issues occur.
+The 'this' keyword in JavaScript refers to the object it belongs to, but its value changes depending on how the function is called.
+Higher-order functions like .map(), .filter(), and .reduce() are powerful tools for functional programming and array manipulation in JavaScript.
+Closures in JavaScript allow a function to access variables from its outer scope even after the outer function has finished executing.
+The event loop is a fundamental concept in JavaScript that handles asynchronous operations by moving them to a task queue.
+Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.
+Strict mode ('use strict') in JavaScript helps catch common coding mistakes and prevents the use of potentially problematic features.
+Module systems like CommonJS and ES Modules allow developers to organize code into reusable files and handle dependencies efficiently.
+Package managers like npm and yarn are used to manage third-party libraries and dependencies in JavaScript projects.
+Git is a version control system used to track changes in source code during software development and collaborate with other developers.
+Testing in web development includes unit tests, integration tests, and end-to-end tests to ensure code quality and prevent regressions.
+Deployment involves moving code from a local development environment to a production server where users can access it.
+Continuous Integration and Continuous Deployment (CI/CD) pipelines automate the testing and deployment process for faster and safer releases.
+API documentation tools like Swagger or Postman help developers understand how to interact with backend services.
+Environment variables are used to store sensitive information like API keys and database credentials outside of the source code.
+Markdown is a lightweight markup language used for creating formatted text using a plain-text editor, commonly used for README files and documentation.
+SVG (Scalable Vector Graphics) is an XML-based image format for two-dimensional graphics that can be scaled without losing quality.
+The 'z-index' property in CSS controls the stacking order of elements that overlap on a web page.
+CSS 'display' property determines how an element is rendered (block, inline, flex, grid, none).
+The 'position' property in CSS (static, relative, absolute, fixed, sticky) defines how an element is positioned within its parent and the viewport.
+'Inheritance' in CSS means that some properties are passed down from parent elements to their children unless overridden.
+The 'Cascade' in CSS is the algorithm that determines which styles are applied when multiple rules target the same element.
+Specificity is the weight applied to a CSS rule, determining which one wins when multiple rules conflict.
+Browser developer tools (DevTools) are essential for debugging HTML, CSS, and JavaScript directly in the browser.
+Local development servers like Live Server or Vite's dev server provide instant feedback during the coding process.
+Standardizing code style with tools like Prettier and ESLint helps maintain consistency and readability across projects.
+Responsive typography uses units like 'em', 'rem', and 'vh' to ensure text scales appropriately across different screen sizes.
+The 'viewport' meta tag is critical for responsive design as it controls the page's dimensions and scaling on mobile devices.
+A 'Favicon' is a small icon displayed in the browser tab next to the page title, helping with brand recognition.
+HTML 'id' attributes must be unique within a page, while 'class' attributes can be used on multiple elements.
+The 'alt' attribute on images is essential for accessibility and provides text descriptions if the image fails to load.
+'Inline' styles are applied directly to HTML elements, while 'internal' styles are in <style> tags and 'external' styles are in .css files.
+The 'src' attribute is used to specify the source of external resources like images and scripts, while 'href' is used for links and stylesheets.
+'Null' and 'Undefined' in JavaScript both represent the absence of a value, but 'undefined' means a variable has been declared but not assigned.
+'Array' methods like .push(), .pop(), .shift(), and .unshift() are used to add or remove elements from the beginning or end of an array.
+'Regular Expressions' (RegEx) are patterns used to match character combinations in strings, powerful for validation and searching.
+'Math' object in JavaScript provides properties and methods for mathematical constants and functions.
+'Date' object in JavaScript is used to work with dates and times.
+'Window' object represents the browser window, while 'Document' object represents the HTML document inside the window.
+'Template Literals' use backticks (`) and ${} for easy string interpolation and multi-line strings in JavaScript.
+'Arrow' functions do not have their own 'this', making them ideal for callbacks and preserving scope.
+'Spread' operator (...) is used to expand arrays or objects into individual elements or properties.
+'Rest' parameter (...) allows a function to accept an indefinite number of arguments as an array.
+'Destructuring' assignment allows you to unpack values from arrays or properties from objects into distinct variables.
+'Classes' in JavaScript provide a cleaner syntax for creating objects and handling inheritance (syntactic sugar over prototypes).
+'Modules' allow you to split your code into separate files using 'export' and 'import' statements.
+'Promises' represent the eventual completion (or failure) of an asynchronous operation and its resulting value.
+'Async/Await' is built on top of promises and makes asynchronous code look and behave more like synchronous code.
+The 'Event Loop' consists of the Call Stack, Web APIs, Task Queue, and Microtask Queue.
+'Memory Management' in JavaScript is handled automatically via Garbage Collection, which reclaims memory no longer in use.
+'Strict' equality (===) checks both value and type, while 'loose' equality (==) performs type coercion before comparing.
+'Type Coercion' is the automatic or implicit conversion of values from one data type to another.
+'Falsy' values in JavaScript include false, 0, "", null, undefined, and NaN.
+'Truthy' values are all values that are not falsy.
+'Short-circuit' evaluation uses && and || operators to execute code conditionally based on the truthiness of values.
+'Logical Nullish Coalescing' (??) returns the right-hand operand when the left-hand is null or undefined.
+'Optional Chaining' (?.) allows you to safely access deeply nested object properties without checking each level for null/undefined.
+'Data Attributes' (data-*) allow you to store custom data on standard HTML elements for use with JavaScript and CSS.
+'Content Security Policy' (CSP) is a security layer that helps detect and mitigate certain types of attacks like XSS.
+'Same-Origin Policy' (SOP) is a security measure that restricts how a document or script loaded from one origin can interact with a resource from another.
+'CORS' (Cross-Origin Resource Sharing) is a mechanism that uses HTTP headers to allow servers to describe the set of origins that can access resources.
+'Service Workers' are scripts that run in the background, separate from a web page, enabling features like offline support and push notifications.
+'Web Manifest' is a JSON file that provides information about a web application in a mobile-like manifest format, used for PWAs.
+'Lighthouse' is an open-source, automated tool for improving the quality of web pages (performance, accessibility, SEO).
+'Critical Rendering Path' is the sequence of steps the browser takes to convert HTML, CSS, and JavaScript into pixels on the screen.
+'Reflow' occurs when the layout of a portion or the entire page is recalculated, while 'Repaint' occurs when changes are made to an element's skin.
+'Minification' is the process of removing unnecessary characters (like whitespace and comments) from source code without changing functionality.
+'Bundling' is the process of combining multiple files into a single file to reduce the number of HTTP requests.
+'Tree Shaking' is a form of dead code elimination used to remove unused code from a final bundle.
+'Polyfills' are pieces of code used to provide modern functionality on older browsers that do not natively support it.
+'Transpilation' is the process of converting modern code (like ES6) into an older version (like ES5) for compatibility.
+'Babel' is a popular JavaScript transcompiler used for transpilation.
+'PostCSS' is a tool for transforming CSS with JavaScript plugins, like Autoprefixer.
+'Sass' (Syntactically Awesome Style Sheets) is a CSS preprocessor that adds features like variables, nesting, and mixins.
+'Browser Engines' (like Blink, WebKit, Gecko) are responsible for rendering web content.
+'V8' is Google's open-source high-performance JavaScript and WebAssembly engine, used in Chrome and Node.js.
+'Node.js' is a JavaScript runtime built on Chrome's V8 engine, allowing JavaScript to run on the server.
+'NPM' (Node Package Manager) is the world's largest software registry and package manager for JavaScript.
+'Package.json' is a manifest file for JavaScript projects that records important metadata and dependencies.
+'Package-lock.json' ensures consistent installs across different environments by locking dependency versions.
+'SemVer' (Semantic Versioning) is a versioning scheme (Major.Minor.Patch) used to communicate changes in libraries.
+'DevDependencies' are packages needed only during development (like testing tools and bundlers).
+'Scripts' section in package.json allows you to define custom commands for your project (like 'npm run dev').
+'Git Init' creates a new local repository.
+'Git Clone' copies an existing repository from a remote source.
+'Git Add' stages changes for the next commit.
+'Git Commit' records changes to the repository with a descriptive message.
+'Git Push' sends local commits to a remote repository.
+'Git Pull' fetches and merges changes from a remote repository.
+'Git Branch' allows you to create separate lines of development.
+'Git Merge' combines changes from different branches.
+'Merge Conflicts' occur when Git cannot automatically merge changes and requires manual intervention.
+'Pull Requests' (PRs) allow you to propose changes and have them reviewed before merging into a main branch.
+'GitHub', 'GitLab', and 'Bitbucket' are popular platforms for hosting Git repositories and collaborating.
+'SSH' (Secure Shell) is often used for secure communication between your local machine and remote Git servers.
+'API' (Application Programming Interface) allows different software applications to communicate with each other.
+'REST' (Representational State Transfer) is an architectural style for designing networked applications using HTTP methods.
+'GraphQL' is a query language for APIs that allows clients to request exactly the data they need.
+'HTTP Status Codes' (like 200, 404, 500) indicate the outcome of an HTTP request.
+'JSON' (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write.
+'XML' (eXtensible Markup Language) is a markup language used for storing and transporting data, though JSON is more common today.
+'Query Parameters' are key-value pairs added to the end of a URL to provide additional information to the server.
+'Path Parameters' are parts of a URL path used to identify a specific resource.
+'HTTP Headers' provide additional information about the request or response (like Content-Type and Authorization).
+'Authentication' is the process of verifying who a user is, while 'Authorization' is verifying what they have access to.
+'JWT' (JSON Web Token) is a compact, URL-safe means of representing claims to be transferred between two parties.
+'OAuth' is an open standard for access delegation, commonly used for 'Login with Google/GitHub' features.
+'Sessions' and 'Cookies' are used to maintain user state across multiple HTTP requests.
+'HTTPS' (HyperText Transfer Protocol Secure) encrypts data sent between the browser and server for security.
+'SSL/TLS' certificates are used to establish secure HTTPS connections.
+'DNS' (Domain Name System) translates human-readable domain names into IP addresses.
+'IP Address' (Internet Protocol) is a unique string of numbers that identifies each computer using the Internet.
+'Server' is a computer that provides data and services to other computers (clients) over a network.
+'Client' is a device or application (like a web browser) that requests services or resources from a server.
+'Frontend' is the part of a website that users interact with directly (HTML, CSS, JS).
+'Backend' is the server-side part of a website that handles data processing, database interactions, and business logic.
+'Full Stack' developers are proficient in both frontend and backend development.
+'Databases' (like PostgreSQL, MongoDB, MySQL) are used for persistent storage and retrieval of data.
+'SQL' (Structured Query Language) is used to interact with relational databases.
+'NoSQL' databases use non-relational data models (like document, key-value, graph).
+'ORM' (Object-Relational Mapping) allows you to interact with a database using your programming language instead of raw SQL.
+'CRUD' stands for Create, Read, Update, and Delete, the four basic operations of persistent storage.
+'Environment' (Development, Staging, Production) refers to the different stages of the software lifecycle.
+'Localhost' (127.0.0.1) refers to the current computer used to access it.
+'Port' is a communication endpoint used to identify a specific process on a computer (like 80 for HTTP, 8000 for Django).
+'Terminal' or 'Command Line' is an interface used to interact with the computer using text-based commands.
+'Shell' (like Bash, Zsh, PowerShell) is the program that interprets and executes terminal commands.
+'Vim' and 'Nano' are text editors often used within the terminal.
+'SSH' (Secure Shell) allows you to securely access and control a remote computer over a network.
+'Docker' is a platform that uses containerization to package applications and their dependencies for consistent deployment.
+'Containers' are lightweight, standalone, and executable packages that include everything needed to run an application.
+'Kubernetes' is an open-source system for automating deployment, scaling, and management of containerized applications.
+'Serverless' computing (like AWS Lambda) allows you to run code without managing servers.
+'Cloud' computing provides on-demand access to computing resources over the internet (like AWS, Azure, Google Cloud).
+'CDN' (Content Delivery Network) is a system of distributed servers that deliver web content based on the user's geographic location.
+'Caching' is the process of storing copies of data in a temporary storage location for faster access.
+'Load Balancing' is the process of distributing network traffic across multiple servers to ensure reliability and performance.
+'Uptime' is the measure of time a system is functional and available.
+'Downtime' is the measure of time a system is unavailable.
+'Scalability' is the ability of a system to handle increasing amounts of work by adding resources.
+'Horizontal Scaling' involves adding more machines, while 'Vertical Scaling' involves adding more power (CPU, RAM) to an existing machine.
+'High Availability' (HA) ensures that a system remains operational even if some components fail.
+'Disaster Recovery' (DR) involves plans and processes to restore a system after a catastrophic failure.
+'Monitoring' and 'Logging' help track the health and performance of applications in production.
+'Open Source' software has its source code available for anyone to view, modify, and distribute.
+'License' (like MIT, GPL, Apache) defines the terms under which software can be used and shared.
+'ReadMe' is a documentation file that provides an overview of a project.
+'Changelog' records all notable changes made to a project over time.
+'Documentation' provides instructions and information on how to use and contribute to a project.
+'Issue Tracker' is used to report bugs and suggest new features for a project.
+'Code Review' is the process of having other developers examine your code to improve quality and catch errors.
+'Pair Programming' is a technique where two developers work together at one computer.
+'Agile' and 'Scrum' are methodologies for managing software development projects through iterative cycles.
+'MVP' (Minimum Viable Product) is a version of a product with just enough features to satisfy early customers and provide feedback.
+'UX' (User Experience) focuses on the overall feel of the experience, while 'UI' (User Interface) focuses on the look and layout.
+'Wireframes' and 'Mockups' are visual guides used to plan the design and layout of a website.
+'Prototypes' are interactive models of a product used for testing and feedback.
+'User Persona' is a fictional character created to represent a user type that might use a site or product.
+'Accessibility Audit' checks a website against accessibility standards (like WCAG).
+'SEO' (Search Engine Optimization) is the process of increasing the quality and quantity of website traffic from search engines.
+'Organic Traffic' comes from unpaid search results, while 'Paid Traffic' comes from advertisements.
+'Keywords' are terms that people enter into search engines.
+'Backlinks' are links from other websites to your website, important for SEO authority.
+'Meta Tags' provide information about a web page in the HTML code.
+'Sitemap' is a file that lists all the pages of a website to help search engines crawl it.
+'Robots.txt' is a file that tells search engine crawlers which pages or files they can or can't request from your site.
+'Analytics' (like Google Analytics) help track and report website traffic.
+'Conversion Rate' is the percentage of users who take a desired action (like making a purchase).
+'Bounce Rate' is the percentage of visitors who leave a site after viewing only one page.
+'A/B Testing' compares two versions of a web page to see which one performs better.
+'Technical Debt' is the cost of choosing an easy, short-term solution over a better, long-term one.
+'Refactoring' is the process of restructuring existing computer code without changing its external behavior.
+'Clean Code' is code that is easy to read, understand, and maintain.
+'DRY' (Don't Repeat Yourself) is a principle of software development aimed at reducing repetition.
+'KISS' (Keep It Simple, Stupid) is a design principle stating that systems work best if they are kept simple.
+'SOLID' is a set of five design principles for making software designs more understandable, flexible, and maintainable.
+'Design Patterns' are reusable solutions to commonly occurring problems in software design.
+'Singleton' pattern ensures a class has only one instance and provides a global point of access to it.
+'Factory' pattern provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
+'Observer' pattern defines a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing.
+'Strategy' pattern lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable.
+'Component' based architecture involves building a user interface by combining small, independent, and reusable pieces.
+'Hooks' in React are functions that let you "hook into" React state and lifecycle features from function components.
+'Virtual DOM' is a lightweight copy of the real DOM used by libraries like React to improve performance.
+'Reconciliation' is the process through which React updates the DOM to match the latest state.
+'One-Way Data Flow' means that data has only one way to be transferred to other parts of the application.
+'Two-Way Data Binding' (like in Angular) synchronizes the model and the view automatically.
+'Shadow DOM' is a web standard used to encapsulate CSS and HTML within a component.
+'Custom Elements' allow you to define your own HTML tags and their behavior.
+'HTML Templates' (<template>) allow you to define HTML fragments that are not rendered when the page loads but can be instantiated via JavaScript.
+'Slots' are placeholders inside a web component that you can fill with your own markup.
+'Scoped' CSS is CSS that only applies to a specific component or section of a page.
+'BEM' (Block, Element, Modifier) is a popular naming convention for CSS classes to keep them organized and readable.
+'Atomic' CSS is a methodology where you use many small, single-purpose classes to build your design.
+'Responsive' images use 'srcset' and 'sizes' attributes to provide different image versions for different screen sizes and resolutions.
+'Picture' element (<picture>) allows for more complex responsive image scenarios, like serving different image formats.
+'WebP' and 'AVIF' are modern image formats that provide superior compression and quality compared to JPEG and PNG.
+'Lazy Loading' is a technique that defers the loading of non-critical resources (like images) until they are needed.
+'Preloading' and 'Prefetching' are hints to the browser to download resources earlier than it would otherwise.
+'Critical CSS' is the CSS required to render the above-the-fold content as quickly as possible.
+'FOUC' (Flash of Unstyled Content) occurs when a web page appears briefly with the browser's default styles before the CSS is loaded.
+'FOIT' (Flash of Invisible Text) occurs when text is invisible while a custom web font is loading.
+'FOUT' (Flash of Unstyled Text) occurs when a fallback font is shown before a custom web font finishes loading.
+'Font-display' property in CSS (swap, block, fallback, optional) controls how fonts are rendered during loading.
+'Web Workers' allow you to run JavaScript in background threads, preventing long-running scripts from freezing the UI.
+'IndexedDB' is a low-level API for client-side storage of significant amounts of structured data.
+'Cache API' is a system for storing and retrieving network requests and their responses.
+'Streams API' allows you to process data piece by piece as it arrives, rather than waiting for the entire resource.
+'Intersection Observer' API allows you to asynchronously observe changes in the intersection of a target element with an ancestor or the viewport.
+'Resize Observer' API allows you to observe changes to an element's dimensions.
+'Mutation Observer' API allows you to observe changes made to the DOM tree.
+'Keyboard' events (keydown, keypress, keyup) allow you to respond to user input from the keyboard.
+'Mouse' events (click, dblclick, mousedown, mouseup, mousemove, mouseover, mouseout) allow you to respond to user input from the mouse.
+'Touch' events (touchstart, touchmove, touchend, touchcancel) allow you to respond to user input on touch-sensitive devices.
+'Form' events (submit, change, input, focus, blur) allow you to handle user interaction with form elements.
+'Drag and Drop' API allows you to implement drag-and-drop functionality on web pages.
+'History' API allows you to manipulate the browser's session history (useful for client-side routing).
+'URL' object in JavaScript provides a convenient way to parse and manipulate URLs.
+'Blob' (Binary Large Object) represents a file-like object of immutable, raw data.
+'File' object represents a file and provides information about it.
+'FileReader' object allows web applications to asynchronously read the contents of files stored on the user's computer.
+'Canvas' API allows you to draw 2D and 3D graphics using JavaScript.
+'WebGL' is a JavaScript API for rendering high-performance interactive 3D and 2D graphics within any compatible web browser.
+'WebAudio' API provides a powerful and versatile system for controlling audio on the Web.
+'WebRTC' (Web Real-Time Communication) allows for real-time peer-to-peer communication (audio, video, data).
+'Speech Synthesis' API allows web applications to generate synthetic speech from text.
+'Speech Recognition' API allows web applications to convert spoken audio into text.
+'Battery' Status API provides information about the system's battery charge level.
+'Vibration' API allows web applications to provide haptic feedback via the device's vibration hardware.
+'Permissions' API provides a consistent way to query and request permissions for various Web APIs.
+'Payment Request' API provides a consistent user interface for making payments on the Web.
+'Credential Management' API allows web applications to interact with the browser's credential store.
+'Web Authentication' (WebAuthn) API allows for secure, public-key-based authentication using hardware authenticators.
+'GamePad' API allows web applications to respond to input from game controllers.
+'Fullscreen' API allows you to present a specific element (and its descendants) in fullscreen mode.
+'Screen Orientation' API provides the ability to read the screen orientation state and lock the screen orientation.
+'Page Visibility' API provides events that let you know when a page is visible or in focus.
+'User Timing' API allows you to measure the performance of your own JavaScript code.
+'Resource Timing' API provides detailed network timing data for every resource loaded by a page.
+'Navigation Timing' API provides performance data for the navigation of the current document.
+'Paint Timing' API provides data about when the browser first painted pixels to the screen.
+'Layout Instability' API (CLS) measures how much elements shift during the rendering process.
+'Server-Timing' header allows the server to pass timing information to the browser.
+'Reporting' API provides a mechanism for web applications to report errors and other issues to the server.
+'Feature Policy' or 'Permissions Policy' allows you to selectively enable and disable browser features and APIs.
+'COOP' (Cross-Origin-Opener-Policy) and 'COEP' (Cross-Origin-Embedder-Policy) are security headers used to isolate cross-origin documents.
+'Referrer-Policy' header controls how much referrer information should be included with requests.
+'X-Content-Type-Options' header prevents the browser from MIME-sniffing the response.
+'X-Frame-Options' header prevents the site from being embedded in an iframe (clickjacking protection).
+'X-XSS-Protection' header enables the browser's built-in XSS filter.
+'Strict-Transport-Security' (HSTS) header tells the browser to only access the site via HTTPS.
+'Expect-CT' header allows sites to opt into Certificate Transparency requirements.
+'Clear-Site-Data' header allows a site to clear its data (cookies, cache, storage) on the user's browser.
+'Save-Data' header indicates the user's preference for reduced data usage.
+'Sec-CH-UA' (User-Agent Client Hints) provide a more privacy-preserving way to identify the user's browser and device.
+'Network Information' API provides information about the user's network connection (type, downlink, rtt).
+'Device Memory' API provides an estimate of the device's RAM.
+'Hardware Concurrency' property provides the number of logical processor cores available.
+'Max Touch Points' property provides the maximum number of simultaneous touch points supported by the device.
+'Pointer Events' API provides a unified way to handle input from mouse, pen, and touch.
+'Intl' object provides various internationalization features like number formatting, date formatting, and collation.
+'WebAssembly' (Wasm) is a binary instruction format for a stack-based virtual machine, designed as a portable compilation target for high-level languages like C, C++, and Rust, enabling high-performance applications on the Web.
+'Atomics' and 'SharedArrayBuffer' allow for safe communication and data sharing between web workers.
+'OffscreenCanvas' allows you to draw on a canvas from a web worker.
+'ResizeObserver' allows you to react to changes in an element's size.
+'IntersectionObserver' allows you to react to an element entering or leaving the viewport.
+'MutationObserver' allows you to react to changes in the DOM tree.
+'PerformanceObserver' allows you to observe performance measurement events.
+'ReportingObserver' allows you to observe reports from the browser.
+'LayoutShift' (CLS) is a performance metric that measures visual stability.
+'First Input Delay' (FID) is a performance metric that measures interactivity.
+'Largest Contentful Paint' (LCP) is a performance metric that measures loading performance.
+'Cumulative Layout Shift' (CLS) measures visual stability.
+'First Contentful Paint' (FCP) measures the time from when the page starts loading to when any part of the page's content is rendered on the screen.
+'Time to Interactive' (TTI) measures the time from when the page starts loading to when it's visually rendered, its initial scripts have loaded, and it's capable of reliably responding to user input.
+'Total Blocking Time' (TBT) measures the total amount of time between FCP and TTI where the main thread was blocked for long enough to prevent input responsiveness.
+'Speed Index' measures how quickly the contents of a page are visibly populated.
+'Optimization' techniques like Code Splitting, Tree Shaking, and Caching are critical for modern web apps.
+'Brotli' and 'Gzip' are compression algorithms used to reduce the size of web resources during transport.
+'HTTP/2' and 'HTTP/3' (QUIC) are modern versions of the HTTP protocol that improve performance through multiplexing and other features.
+'TCP' and 'UDP' are the underlying transport protocols for web communication.
+'TLS' (Transport Layer Security) provides encryption and authentication for HTTPS connections.
+'QUIC' is a new transport protocol that combines features of TCP and UDP with built-in encryption.
+'OCSP Stapling' improves the performance of TLS handshakes by providing the status of the SSL certificate.
+'ALPN' (Application-Layer Protocol Negotiation) allows the client and server to negotiate which protocol to use (like HTTP/2).
+'HSTS' Preload list is a list of sites that browsers will only ever connect to via HTTPS.
+'CSP' (Content Security Policy) is a powerful security header that can prevent many types of attacks.
+'Subresource Integrity' (SRI) allows browsers to verify that resources fetched from a CDN have not been tampered with.
+'X-Download-Options' header prevents IE from opening downloads directly.
+'X-Permitted-Cross-Domain-Policies' header defines which cross-domain policies are allowed.
+'Permissions-Policy' header replaces the older Feature-Policy and provides more granular control over browser features.
+'CORS' preflight requests (OPTIONS) are sent by the browser to check if the server allows a cross-origin request.
+'Origin' header is sent by the browser to indicate the origin of a request.
+'Access-Control-Allow-Origin' header is sent by the server to indicate which origins are allowed to access the resource.
+'Access-Control-Allow-Methods' header indicates which HTTP methods are allowed.
+'Access-Control-Allow-Headers' header indicates which HTTP headers are allowed.
+'Access-Control-Allow-Credentials' header indicates whether credentials (like cookies) are allowed in cross-origin requests.
+'Access-Control-Max-Age' header indicates how long the results of a preflight request can be cached.
+'Preflight' requests are used for 'unsafe' methods (like POST with JSON) or custom headers.
+'Simple' requests (like GET and POST with form data) do not require a preflight.
+'Credentials' (omit, same-origin, include) in fetch API control whether cookies are sent.
+'Mode' (cors, no-cors, same-origin, navigate) in fetch API controls the security mode of the request.
+'Cache' (default, no-store, reload, no-cache, force-cache, only-if-cached) in fetch API controls the caching behavior.
+'Redirect' (follow, error, manual) in fetch API controls how redirects are handled.
+'Integrity' in fetch API allows you to verify the hash of the fetched resource.
+'AbortController' allows you to cancel one or more web requests.
+'Signal' in fetch API is used to pass an AbortSignal to the request.
+'URLSearchParams' provides a convenient way to work with query strings.
+'FormData' provides a way to construct key-value pairs representing form fields and their values.
+'Blob' and 'File' can be used with FormData for uploading files.
+'URL.createObjectURL()' creates a temporary URL representing a Blob or File.
+'URL.revokeObjectURL()' releases the memory used by a temporary object URL.
+'Base64' encoding is used to represent binary data as a string of ASCII characters.
+'btoa()' and 'atob()' are used for Base64 encoding and decoding in JavaScript.
+'TextEncoder' and 'TextDecoder' are used to convert strings to and from typed arrays (like Uint8Array).
+'TypedArrays' (like Int8Array, Float64Array) provide a way to work with raw binary data in JavaScript.
+'ArrayBuffer' represents a generic, fixed-length raw binary data buffer.
+'DataView' provides a low-level interface for reading and writing multiple number types in an ArrayBuffer.
+'BigInt' is a numeric primitive in JavaScript that can represent integers with arbitrary precision.
+'Symbol' is a unique and immutable primitive value that may be used as the key of an Object property.
+'Map' is a collection of keyed data items, similar to an Object but allows keys of any type.
+'Set' is a collection of unique values.
+'WeakMap' and 'WeakSet' are similar to Map and Set but do not prevent their keys/values from being garbage collected.
+'Proxy' and 'Reflect' allow you to intercept and customize fundamental operations on objects.
+'Decorators' are a proposed feature for modifying classes and their members (already available in TypeScript).
+'Generators' are functions that can be exited and later re-entered, maintaining their state across re-entrances.
+'Iterators' and 'Async Iterators' provide a standard way to loop through collections of data.
+'For...of' and 'For await...of' loops are used with iterators and async iterators.
+'Labels' in JavaScript can be used with break and continue to control the flow of nested loops.
+'Try...catch...finally' allows for error handling and guaranteed cleanup code.
+'Throw' statement is used to create custom errors.
+'Error' object provides information about the type and cause of an error.
+'Console' methods (log, error, warn, info, table, group, time) are essential for debugging and logging.
+'Debugger' statement triggers the browser's debugger if available.
+'Stack Trace' provides a list of the function calls that led to an error.
+'Profiling' tools help identify performance bottlenecks in your code.
+'Memory Leak' occurs when memory that is no longer needed is not reclaimed.
+'Heap' is the portion of memory used for storing objects.
+'Stack' is the portion of memory used for storing function calls and local variables.
+'Scope' determines the visibility and lifetime of variables.
+'Lexical Scope' means that the scope of a variable is determined by its position in the source code.
+'Closure' is a combination of a function and the lexical environment within which that function was declared.
+'Global Scope' variables are accessible from anywhere in the code.
+'Module Scope' variables are only accessible within the module they are defined in.
+'Block Scope' variables are only accessible within the block ({}) they are defined in.
+'Shadowing' occurs when a variable in an inner scope has the same name as a variable in an outer scope.
+'Hoisting' moves variable and function declarations to the top of their scope.
+'Function Declaration' vs 'Function Expression': declarations are hoisted, expressions are not.
+'Anonymous' functions do not have a name.
+'Immediately Invoked Function Expressions' (IIFE) are executed as soon as they are defined.
+'Recursion' occurs when a function calls itself.
+'Currying' is a technique of converting a function with multiple arguments into a sequence of functions each with a single argument.
+'Memoization' is an optimization technique used to speed up computer programs by storing the results of expensive function calls.
+'Throttling' and 'Debouncing' are techniques used to limit the rate at which a function is executed.
+'Pure' functions always return the same output for the same input and have no side effects.
+'Side Effects' are any changes made by a function outside of its return value.
+'Immutability' means that data cannot be changed once it's created.
+'Functional Programming' is a programming paradigm that treats computation as the evaluation of mathematical functions.
+'Object-Oriented Programming' (OOP) is a programming paradigm based on the concept of 'objects' which can contain data and code.
+'Inheritance' allows a class to inherit properties and methods from another class.
+'Encapsulation' involves bundling data and methods that operate on that data into a single unit (class).
+'Polymorphism' allows objects of different types to be treated as if they were of a common type.
+'Abstraction' involves hiding complex implementation details and showing only the necessary features.
+'Prototypes' are the mechanism by which JavaScript objects inherit features from one another.
+'Prototype Chain' is a series of linked objects used for property lookup.
+'Constructor' functions are used to create and initialize objects.
+'New' operator creates a new object and calls the constructor function.
+'Static' methods and properties belong to the class itself rather than its instances.
+'Private' fields (#field) are only accessible within the class they are defined in.
+'Getters' and 'Setters' allow you to define custom behavior for reading and writing object properties.
+'Instanceof' operator checks if an object is an instance of a specific class or constructor.
+'Typeof' operator returns a string indicating the type of the unevaluated operand.
+'Coercion' can lead to unexpected results, like '5' + 5 = '55'.
+'Nan' (Not-a-Number) is a special value representing an invalid number.
+'Infinity' and '-Infinity' represent values greater than or less than any representable number.
+'Bitwise' operators perform operations on binary representations of numbers.
+'Void' operator evaluates an expression and returns undefined.
+'Comma' operator evaluates each of its operands and returns the value of the last operand.
+'Delete' operator removes a property from an object.
+'In' operator checks if an object has a specific property.
+'For...in' loop iterates over the enumerable properties of an object.
+'Object.keys()', 'Object.values()', and 'Object.entries()' are used to iterate over object properties.
+'Object.assign()' and the spread operator (...) are used to copy object properties.
+'Object.freeze()' and 'Object.seal()' are used to prevent modifications to objects.
+'Object.create()' creates a new object with a specified prototype.
+'Object.getPrototypeOf()' and 'Object.setPrototypeOf()' are used to access and modify an object's prototype.
+'JSON.stringify()' and 'JSON.parse()' are used to convert objects to and from JSON strings.
+'Strict' mode ('use strict') catches common mistakes and improves performance.
+'Debugger' statement pauses code execution and opens the browser's debugger.
+'Console.dir()' displays an interactive list of the properties of a specified object.
+'Console.trace()' outputs a stack trace to the console.
+'Console.time()' and 'Console.timeEnd()' are used to measure the time taken by a block of code.
+'Performance.now()' provides a high-resolution timestamp for performance measurement.
+'RequestAnimationFrame' allows you to perform smooth animations by syncing with the browser's refresh rate.
+'SetTimeout' and 'SetInterval' are used to execute code after a delay or repeatedly at intervals.
+'ClearTimeout' and 'ClearInterval' are used to cancel scheduled executions.
+'Microtasks' (like Promises) are executed before 'Macrotasks' (like setTimeout) in the event loop.
+'Event Delegation' involves adding a single event listener to a parent element to handle events on its children.
+'Event Bubbling' is the process where an event starts at the target element and moves up the DOM tree.
+'Event Capturing' is the process where an event starts at the top of the DOM tree and moves down to the target element.
+'StopPropagation()' prevents an event from further bubbling or capturing.
+'PreventDefault()' prevents the browser's default action for an event.
+'Passive' event listeners improve scroll performance by telling the browser the listener will not call preventDefault().
+'CustomEvent' API allows you to create and dispatch your own events.
+'DispatchEvent()' is used to trigger an event on a specific element.
+'Shadow DOM' isolation prevents styles from leaking into or out of a component.
+'CSS-in-JS' involves writing CSS directly in your JavaScript files using libraries like Styled Components or Emotion.
+'Responsive' web design ensures a site works on all devices (mobile, tablet, desktop).
+'Mobile-First' design involves designing for smaller screens first and then adding styles for larger screens.
+'Progressive Enhancement' involves building a basic functional experience first and then adding enhancements for modern browsers.
+'Graceful Degradation' involves building the full experience first and then ensuring it still works on older browsers.
+'Grid' and 'Flexbox' are the modern ways to build layouts in CSS.
+'Float' and 'Clear' were older layout methods that are now mostly obsolete.
+'Centering' elements in CSS is now much easier with Flexbox (justify-content: center; align-items: center;) or Grid (place-items: center;).
+'Aspect-ratio' property in CSS allows you to define a preferred aspect ratio for an element.
+'Object-fit' property in CSS controls how an image or video fits into its container (cover, contain, fill).
+'Background-size: cover' ensures a background image covers the entire container while maintaining its aspect ratio.
+'Media Queries' can target screen width, height, resolution, orientation, and more.
+'Rem' units are relative to the root element's font size, while 'em' units are relative to the parent element's font size.
+'Vh' (viewport height) and 'Vw' (viewport width) units are relative to the size of the viewport.
+'Calc()' function in CSS allows you to perform mathematical calculations for property values.
+'Clamp()' function in CSS allows you to define a responsive value that stays within a specific range.
+'Min()' and 'Max()' functions in CSS return the smallest or largest value from a list of arguments.
+'Filter' property in CSS applies graphical effects like blur, brightness, and contrast to elements.
+'Backdrop-filter' property in CSS applies these effects to the area behind an element.
+'Clip-path' property in CSS allows you to create non-rectangular shapes for elements.
+'Mask' property in CSS allows you to use images or gradients as masks for elements.
+'Linear-gradient' and 'Radial-gradient' are used to create smooth transitions between colors in CSS.
+'Box-shadow' and 'Text-shadow' add shadows to elements and text.
+'Opacity' property controls the transparency of an element.
+'Visibility: hidden' makes an element invisible but still takes up space, while 'display: none' removes it from the layout entirely.
+'Cursor' property in CSS changes the mouse pointer when hovering over an element.
+'Pointer-events: none' makes an element ignore mouse and touch events.
+'User-select: none' prevents users from selecting text within an element.
+'Overflow' property (visible, hidden, scroll, auto) controls what happens when content exceeds its container.
+'Scroll-behavior: smooth' enables smooth scrolling for anchor links and JavaScript-based scrolls.
+'Sticky' positioning keeps an element within the viewport as the user scrolls, until it reaches its parent's boundaries.
+'Transition-delay', 'Transition-duration', 'Transition-property', and 'Transition-timing-function' control CSS transitions.
+'Animation-iteration-count' defines how many times an animation should play (like 'infinite').
+'Animation-fill-mode' (forwards, backwards, both) defines what styles are applied before and after an animation plays.
+'Will-change' property in CSS provides a hint to the browser about which properties are likely to change, allowing for optimization.
+'Transforms' (translate, rotate, scale, skew) allow you to manipulate the visual state of elements in 2D or 3D space.
+'Transform-origin' defines the point around which transforms are applied.
+'Perspective' property in CSS is used to give 3D-transformed elements some perspective.
+'Backface-visibility' property determines whether the back side of an element is visible when it's rotated.
+'Writing-mode' and 'Direction' properties control the flow of text on a page.
+'Word-break' and 'Overflow-wrap' control how long words are broken or wrapped.
+'White-space' property controls how whitespace and line breaks are handled.
+'Line-height' property defines the vertical space between lines of text.
+'Letter-spacing' and 'Word-spacing' control the space between characters and words.
+'Text-transform' (uppercase, lowercase, capitalize) changes the case of text.
+'Text-decoration' (underline, line-through) adds decorative lines to text.
+'Font-weight' defines the thickness of characters.
+'Font-style: italic' makes text slanted.
+'Font-family' defines the list of fonts used for an element.
+'System Fonts' are fonts already installed on the user's device, providing the fastest performance.
+'Web Fonts' (like Google Fonts) are downloaded by the browser for a custom look.
+'Variable Fonts' are a single font file that contains multiple variations (weight, width, slant).
+'Antialiasing' in CSS (-webkit-font-smoothing) improves the rendering of fonts on some browsers.
+'Color' property defines the text color.
+'Background-color' property defines the background color of an element.
+'RGBA' and 'HSLA' color formats allow for transparency using the 'alpha' channel.
+'HEX' color codes use hexadecimal values to represent colors.
+'Named' colors (like 'red', 'blue', 'green') provide a simple way to use colors.
+'CurrentColor' keyword in CSS refers to the value of the 'color' property.
+'Transparent' keyword in CSS makes a color completely see-through.
+'Border-radius' property creates rounded corners for elements.
+'Border-width', 'Border-style', and 'Border-color' define the appearance of borders.
+'Outline' property is similar to border but does not take up space in the layout.
+'Box-sizing: border-box' ensures padding and border are included in the total width and height of an element.
+'Margin: auto' is often used to center a block element horizontally within its parent.
+'Float' property allows text to wrap around an image or other element.
+'Clear: both' prevents an element from being positioned next to floated elements.
+'List-style-type' (none, disc, square, decimal) defines the type of bullet or number used in lists.
+'List-style-image' allows you to use a custom image for list markers.
+'List-style-position' (inside, outside) defines where the list marker is positioned relative to the list item.
+'Counter-reset' and 'Counter-increment' are used to create custom automatic numbering in CSS.
+'Content' property in CSS is used with ::before and ::after pseudo-elements to insert content.
+'::Before' and '::After' pseudo-elements allow you to add decorative content before or after an element's actual content.
+'::First-letter' and '::First-line' pseudo-elements allow you to style the first letter or line of a block element.
+'::Selection' pseudo-element styles the portion of a document that has been selected by the user.
+'::Placeholder' pseudo-element styles the placeholder text in input elements.
+':Hover', ':Active', ':Focus', and ':Visited' are pseudo-classes that target elements in different states.
+':First-child', ':Last-child', ':Nth-child()', and ':Only-child' target elements based on their position among siblings.
+':Not()' pseudo-class targets elements that do not match a specific selector.
+':Is()' and ':Where()' pseudo-classes allow you to group multiple selectors efficiently.
+':Has()' pseudo-class (the 'parent' selector) targets an element if it contains specific descendants.
+':Focus-within' pseudo-class targets an element if any of its descendants have focus.
+':Focus-visible' pseudo-class targets an element that has focus specifically via keyboard interaction.
+':Empty' pseudo-class targets elements that have no children (including text nodes).
+':Checked', ':Disabled', ':Enabled', and ':Required' target form elements based on their state.
+':Valid' and ':Invalid' target form elements based on whether their values pass validation.
+'Attribute Selectors' (like [title], [href^="https"], [src$=".png"], [class*="active"]) provide powerful targeting options.
+'Attribute Case-Insensitivity' ([title="value" i]) allows for case-insensitive attribute matching in CSS.
+'Combinators' (space, >, +, ~) define the relationship between elements in a selector.
+'Descendant Combinator' (space) targets all descendants of an element.
+'Child Combinator' (>) targets only direct children of an element.
+'Adjacent Sibling Combinator' (+) targets the sibling immediately following an element.
+'General Sibling Combinator' (~) targets all siblings following an element.
+'Specificity' rules: inline styles (1000), IDs (100), classes/pseudo-classes/attributes (10), elements/pseudo-elements (1).
+'!Important' flag in CSS overrides all other specificity rules, but should be used sparingly.
+'Initial' keyword resets a property to its default value according to the CSS specification.
+'Inherit' keyword forces a property to inherit its value from the parent element.
+'Unset' keyword acts as 'inherit' if the property is naturally inherited, and 'initial' otherwise.
+'Revert' keyword resets a property to its value according to the browser's default stylesheet or user stylesheet.
+'All: unset' is a quick way to reset all CSS properties on an element.
+'System UI' font family uses the default font of the user's operating system.
+'Safe Areas' (env(safe-area-inset-*)) are used to handle notches and rounded corners on modern mobile devices.
+'Scroll Snap' API in CSS allows you to create smooth, snapped scrolling experiences.
+'Media' features (prefers-color-scheme, prefers-reduced-motion, orientation, resolution) allow for highly personalized designs.
+'Dark Mode' is often implemented using '@media (prefers-color-scheme: dark)' and CSS variables.
+'Container Queries' (@container) are a new feature that allows styling elements based on the size of their container rather than the viewport.
+'Subgrid' allows a nested grid to align its rows or columns with its parent grid.
+'Logical Properties' (margin-block, padding-inline, inset-block-start) provide a way to handle layouts that adapt to different writing modes (LTR, RTL).
+'Aspect-ratio' is a modern CSS property that ensures an element maintains a specific width-to-height ratio.
+'Object-view-box' is a proposed CSS property that allows you to crop and zoom images directly in CSS.
+'Layer' (@layer) is a new CSS feature that allows you to control the cascade more explicitly by grouping styles into layers.
+'Scope' (@scope) is a proposed CSS feature that allows you to limit the scope of styles to a specific subtree.
+'Accent-color' property allows you to change the color of form controls (checkboxes, radios, ranges) with a single line of CSS.
+'Color-mix()' function allows you to mix two colors directly in CSS.
+'Color-contrast()' function (proposed) helps ensure accessible color contrast ratios.
+'Relative Color Syntax' (proposed) allows you to derive new colors from existing ones (e.g., changing the lightness of a base color).
+'Trigonometric Functions' (sin(), cos(), tan(), etc.) are now available in CSS for complex layouts and animations.
+'Math Functions' (round(), mod(), rem(), abs(), sign()) are also available in CSS.
+'Scroll-timeline' and 'View-timeline' are new APIs for creating scroll-driven animations in CSS without JavaScript.
+'Masonry' layout (proposed) is a new CSS Grid feature for creating Pinterest-style grids automatically.
+'Anchor Positioning' (proposed) allows you to position an element relative to another 'anchor' element on the page.
+'Style Queries' (proposed) are part of container queries that allow you to style elements based on the values of CSS variables on their container.
+'Individual Transform Properties' (scale, rotate, translate) are now separate CSS properties, making them easier to animate independently.
+'Font-palette' and '@font-palette-values' allow you to customize the colors of color fonts (like Emojis).
+'Hyphens' property in CSS controls whether the browser can break words at syllable boundaries with a hyphen.
+'Inter-character' and 'Inter-word' spacing in CSS can be adjusted to improve readability.
+'Tab-size' property in CSS controls the width of tab characters.
+'Scrollbar-width' and 'Scrollbar-color' allow for basic styling of scrollbars in some browsers.
+'Text-underline-offset' and 'Text-decoration-thickness' allow for fine control over text underlines.
+'Accent-color' automatically chooses an appropriate contrasting color for checkmarks and indicators.
+'Inert' attribute on HTML elements makes them and their descendants non-interactive and hidden from assistive technology.
+'Dialog' element (<dialog>) provides a standard way to create modal and non-modal dialog boxes.
+'Details' and 'Summary' elements allow you to create simple toggleable disclosure widgets without JavaScript.
+'Picture' and 'Source' tags provide advanced art direction for responsive images.
+'Loading="lazy"' attribute on <img> and <iframe> tags enables native browser-supported lazy loading.
+'Decoding="async"' attribute on <img> tags tells the browser to decode the image off the main thread.
+'Importance' or 'Fetchpriority' attribute allows you to give the browser hints about the relative priority of resources.
+'Enterkeyhint' attribute on input elements changes the label or icon of the 'Enter' key on virtual keyboards.
+'Inputmode' attribute on input elements hints at the type of data the user will enter, showing the appropriate virtual keyboard.
+'Autocomplete' attribute helps browsers and password managers fill in form data correctly.
+'Pattern' attribute allows you to use RegEx for native HTML form validation.
+'Title' attribute provides a tooltip when the user hovers over an element.
+'Tabindex' attribute controls the order in which elements receive focus via the 'Tab' key.
+'Role' and 'Aria-*' attributes are used to provide extra information to assistive technologies.
+'Lang' attribute on the <html> tag is essential for telling browsers and screen readers the language of the page.
+'Charset="UTF-8"' meta tag ensures the page supports a wide range of characters and symbols.
+'Viewport' meta tag is critical for ensuring the site is mobile-friendly.
+'Theme-color' meta tag allows you to customize the color of the browser's address bar on mobile devices.
+'Description' meta tag provides a summary of the page for search engine results.
+'Canonical' link tag tells search engines which version of a URL is the primary one, avoiding duplicate content issues.
+'Open Graph' (og:*) and 'Twitter' (twitter:*) meta tags control how the page looks when shared on social media.
+'Icons' (favicon, apple-touch-icon) provide visual branding in browser tabs and home screens.
+'Manifest' link tag points to the PWA manifest file.
+'Dns-prefetch', 'Preconnect', 'Preload', and 'Prefetch' are resource hints that help the browser optimize loading.
+'Crossorigin' attribute is used when fetching resources from a different origin.
+'Integrity' attribute provides a hash for SRI verification.
+'Async' and 'Defer' attributes on <script> tags control how scripts are loaded and executed.
+'Nomodule' attribute on <script> tags allows you to provide fallback scripts for older browsers that don't support ES Modules.
+'Type="module"' on <script> tags enables ES Modules in the browser.
+'Server-Side Events' (SSE) allow the server to push real-time updates to the client over HTTP.
+'BroadcastChannel' API allows for communication between different windows, tabs, or iframes of the same origin.
+'Channel Messaging' API allows scripts in different browsing contexts to communicate directly.
+'Cookie Store' API provides an asynchronous way to interact with cookies.
+'Compression' API allows web applications to compress and decompress data using Gzip or Deflate.
+'Gravity' or 'Accelerometer' API provides access to the device's motion sensors.
+'Ambient Light' API (experimental) provides information about the lighting conditions around the device.
+'Proximity' API (experimental) provides information about the distance between the device and an object.
+'Badging' API allows web applications to set a badge on the application's icon (like a notification count).
+'Contact Picker' API allows users to select contacts from their device and share them with the web application.
+'File System Access' API allows web applications to read or save changes directly to files and folders on the user's device.
+'Web Bluetooth' API allows web applications to communicate with nearby Bluetooth devices.
+'Web USB' API allows web applications to communicate with USB devices.
+'Web Serial' API allows web applications to communicate with serial devices.
+'Web HID' (Human Interface Device) API allows web applications to communicate with HID devices (like gamepads and specialized keyboards).
+'Web NFC' API allows web applications to read and write to NFC tags.
+'Web MIDI' API allows web applications to interact with MIDI devices.
+'Multi-Screen Window Placement' API allows web applications to accurately position windows across multiple screens.
+'EyeDropper' API allows users to pick a color from their screen and share it with the web application.
+'Virtual Keyboard' API provides more control over when and how the virtual keyboard is shown.
+'Window Management' API provides tools for managing multiple browser windows.
+'Navigation' API (proposed) aims to modernize and simplify client-side routing.
+'Sanitizer' API (proposed) provides a secure way to sanitize untrusted HTML strings before inserting them into the DOM.
+'EditContext' API (proposed) provides a more robust way to build custom text editors.
+'Atomic' operations and 'Wait/Notify' are used for low-level synchronization between web workers.
+'Lock' API allows scripts to coordinate access to shared resources.
+'Storage' API provides tools for managing and querying storage persistence and usage.
+'Web Share' API allows web applications to share text, links, and files using the device's native sharing mechanism.
+'Web Share Target' API allows web applications to receive shared content from other applications.
+'Target=" _blank"' opens a link in a new tab or window.
+'Rel="noopener noreferrer"' is a security best practice when using target="_blank".
+'Hidden' attribute on HTML elements is a semantic way to hide content.
+'Download' attribute on <a> tags tells the browser to download the linked resource instead of navigating to it.
+'Draggable' attribute makes an element movable via the drag-and-drop API.
+'Spellcheck' attribute enables or disables the browser's built-in spellchecker for an element.
+'Contenteditable' attribute allows users to edit the content of an element directly.
+'Translate' attribute tells the browser whether the content of an element should be translated.
+'Accesskey' attribute provides a shortcut key to activate or focus an element.
+'Autofocus' attribute automatically focuses an element when the page loads.
+'Multiple' attribute allows users to select more than one value in <select> and <input type="file"> elements.
+'Required' attribute makes a form field mandatory.
+'Readonly' attribute prevents users from modifying the value of a form field.
+'Disabled' attribute makes a form field non-interactive.
+'Maxlength' and 'Minlength' attributes set the character limits for text inputs.
+'Max' and 'Min' attributes set the numeric or date limits for inputs.
+'Step' attribute defines the legal number intervals for numeric inputs.
+'Value' attribute sets the initial value of a form field.
+'Name' attribute is used to identify form data when it's submitted to a server.
+'Placeholder' attribute provides a hint to the user about what to enter in a form field.
+'For' attribute on <label> tags links the label to a specific form element via its ID.
+'Colspan' and 'Rowspan' attributes in <table> cells allow them to span multiple columns or rows.
+'Scope' attribute in <th> tags defines whether the header is for a row, column, or group.
+'Usemap' and 'Ismap' attributes are used with <map> and <area> to create image maps.
+'Object' and 'Embed' tags are used to include external content like PDFs, Flash (obsolete), and other media.
+'Iframe' tag allows you to embed another HTML page within the current page.
+'Sandbox' attribute on <iframe> provides extra security restrictions for embedded content.
+'Allow' attribute on <iframe> controls which browser features (like camera, microphone) are available to the embedded page.
+'Video' and 'Audio' tags provide native support for playing media files without plugins.
+'Controls', 'Autoplay', 'Loop', and 'Muted' are common attributes for media elements.
+'Poster' attribute on <video> tags provides an image to show before the video starts playing.
+'Track' element (<track>) is used to provide subtitles, captions, and other timed text for media.
+'Canvas' element (<canvas>) provides a scriptable area for drawing graphics.
+'SVG' element (<svg>) allows for embedding scalable vector graphics directly in the HTML.
+'MathMl' allows for representing mathematical formulas in HTML.
+'Rb', 'Rt', and 'Rp' elements are used for ruby annotations (common in East Asian languages).
+'Bdi' and 'Bdo' elements are used for bi-directional text isolation and override.
+'Wbr' element suggests a possible line break point in a long word.
+'Dfn' element marks the defining instance of a term.
+'Abbr' element defines an abbreviation or acronym.
+'Data' element links a piece of content with a machine-readable translation.
+'Time' element represents a specific period in time or a date.
+'Code', 'Kbd', 'Samp', and 'Var' are used for representing computer code and user input.
+'Pre' element represents preformatted text, preserving whitespace and line breaks.
+'Blockquote' and 'Q' elements are used for long and short quotations.
+'Cite' element represents the title of a work.
+'I', 'B', 'U', 'S' are older tags for italic, bold, underline, and strikethrough (modern alternatives like <em>, <strong> are preferred).
+'Small' element represents side-comments and small print, like copyright information.
+'Mark' element highlights a portion of text.
+'Ruby' element is used for ruby annotations.
+'Sub' and 'Sup' elements represent subscript and superscript text.
+'Br' element creates a line break.
+'Hr' element represents a thematic break (horizontal rule).
+'Div' and 'Span' are generic containers for grouping and styling content.
+'Main', 'Header', 'Footer', 'Nav', 'Aside', 'Section', 'Article' are semantic layout elements.
+'H1' through 'H6' are heading elements, with H1 being the most important.
+'P' element represents a paragraph of text.
+'Ul', 'Ol', and 'Li' are used for unordered and ordered lists.
+'Dl', 'Dt', and 'Dd' are used for description lists (formerly definition lists).
+'Table', 'Thead', 'Tbody', 'Tfoot', 'Tr', 'Th', 'Td', 'Caption', 'Colgroup', 'Col' are used for structured tabular data.
+'Address' element provides contact information for a person or organization.
+'Details' and 'Summary' provide a native way to create an accordion/disclosure widget.
+'Dialog' element for native modal and non-modal dialog boxes.
+'Fieldset' and 'Legend' are used to group related form elements and provide a caption.
+'Label' element is crucial for form accessibility.
+'Button' element is used for clickable actions (submit, reset, or custom).
+'Select', 'Option', and 'Optgroup' are used for dropdown menus.
+'Datalist' provides an 'autocomplete' feature for <input> elements.
+'Textarea' is used for multi-line text input.
+'Output' element represents the result of a calculation.
+'Progress' and 'Meter' elements represent progress or a scalar value within a known range.
+'Script' and 'Noscript' are used for including JavaScript and providing fallback content.
+'Style' element allows for internal CSS within the HTML document.
+'Base' element specifies the base URL for all relative URLs in a document.
+'Link' element is used to link external resources like stylesheets and icons.
+'Meta' element provides metadata about the page.
+'Title' element defines the title shown in the browser tab.
+'Html' element is the root of the document.
+'Body' element contains the visible content of the page.
+'Head' element contains metadata and links to external resources.
+'Doctype' declaration is the first line of an HTML document.
+'UTF-8' is the universal character encoding standard for the web.
+'Responsive' web design uses a combination of flexible grids, flexible images, and media queries.
+'Mobile-friendly' sites are easy to use on small screens and touch devices.
+'User-friendly' sites are intuitive, easy to navigate, and provide a good experience for users.
+'Aesthetic' refers to the visual appeal and style of a website.
+'Modern' web design often involves clean layouts, vibrant colors, and smooth animations.
+'Premium' design feels high-quality, professional, and well-crafted.
+'Interactive' elements engage the user and respond to their actions.
+'Dynamic' content changes based on user input or other factors.
+'Accessible' design ensures that everyone can use the site, regardless of their abilities.
+'Performant' sites load quickly and respond fast to user input.
+'Secure' sites protect user data and prevent malicious attacks.
+'Scalable' sites can handle growth in users and data.
+'Maintainable' code is easy to understand, update, and fix.
+'Collaborative' development involves working with others to build and improve a site.
+'Innovation' in web development involves exploring new technologies and techniques to create better experiences.
+'Creativity' is essential for designing unique and engaging websites.
+'Detail-oriented' developers pay attention to the small things that make a big difference.
+'Professionalism' involves following best practices and delivering high-quality work.
+'Passion' for web development drives developers to stay curious and keep learning.
+'Problem-solving' is a core skill for developers, as they constantly face challenges and find solutions.
+'Logic' is the foundation of programming and helps developers build robust and reliable systems.
+'Efficiency' involves finding the best way to achieve a goal with the least amount of resources.
+'Simplicity' is often the key to building great user experiences.
+'Consistency' in design and code helps users and developers understand and use the site.
+'Precision' is important for creating accurate and high-performance applications.
+'Communication' is vital for working with clients, designers, and other developers.
+'Learning' is a continuous process in the fast-paced world of web development.
+'Growth' as a developer involves expanding your skills and taking on new challenges.
+'Community' in web development provides support, inspiration, and opportunities for collaboration.
+'Success' in web development is achieved by building sites that solve problems and delight users.
+'Future' of web development is exciting, with new technologies like AI and Web3 opening up new possibilities.
+'Edith' is a reflection of this journey, a project that demonstrates the power of AI and web technology.
+'Artificial Intelligence' is not just a tool, but a partner in the creative process.
+'Neural Networks' are the digital neurons that power the brain of Edith.
+'Scikit-learn' is the library that provides the algorithms for Edith's learning and reasoning.
+'Numpy' and 'Pandas' are the workhorses that handle the data and mathematics behind the scenes.
+'Django' is the framework that brings it all together and makes it accessible to the world.
+'Tailwind CSS' is the toolkit that makes Edith look as good as she thinks.
+'HTML' and 'JavaScript' are the languages that give Edith a voice and a way to interact with you.
+'Web Development' is the art and science of building the digital world we live in.
+'Infinite' possibilities await those who dare to dream and build with code.
+'Welcome' to the world of Edith AI, where intelligence meets the web.
+'Hope' you enjoy the experience and learn something new today.
+'Thank' you for being part of this journey.
+'Goodbye' for now, but stay curious and keep building!
