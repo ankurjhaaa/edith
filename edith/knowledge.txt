@@ -766,3 +766,44 @@ The 'Event Loop' consists of the Call Stack, Web APIs, Task Queue, and Microtask
 'Hope' you enjoy the experience and learn something new today.
 'Thank' you for being part of this journey.
 'Goodbye' for now, but stay curious and keep building!
+
+# --- ADVANCED WEB ARCHITECTURE ---
+'HTML5' provides semantic elements like <article>, <aside>, <details>, <figcaption>, <figure>, <footer>, <header>, <main>, <mark>, <nav>, <section>, <summary>, <time>.
+'CSS Grid' is a 2D layout system for the web. It allows you to create complex layouts with rows and columns without using floats or positioning.
+'Flexbox' is a 1D layout model for distributing space among items in an interface and powerful alignment capabilities.
+'Z-index' property specifies the stack order of an element. An element with greater stack order is always in front of an element with a lower stack order.
+'Box Model' in CSS consists of: margin, border, padding, and the actual content.
+'Specificity' is the means by which browsers decide which CSS property values are the most relevant to an element and, therefore, will be applied.
+
+# --- JAVASCRIPT DEEP DIVE ---
+'Closures' in JavaScript are functions that have access to the outer (enclosing) function's scope even after the outer function has returned.
+'Prototypal Inheritance' is a feature in JS used to add methods and properties in objects. It is a method by which an object can inherit the properties and methods of another object.
+'Event Loop' is a constantly running process that monitors both the callback queue and the call stack.
+'Promises' represent the eventual completion (or failure) of an asynchronous operation and its resulting value.
+'Async/Await' is a special syntax to work with promises in a more comfortable fashion. It's surprisingly easy to understand and use.
+'DOM' (Document Object Model) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document.
+
+# --- PYTHON & DJANGO POWER ---
+'List Comprehensions' provide a concise way to create lists in Python.
+'Decorators' in Python are a very powerful and useful tool since it allows programmers to modify the behavior of function or class.
+'Django ORM' (Object-Relational Mapper) allows you to interact with your database, like MySQL, PostgreSQL or SQLite, in the same way you would with Python objects.
+'Django Middleware' is a framework of hooks into Django's request/response processing. It's a light, low-level 'plugin' system for globally altering Django's input or output.
+'Django QuerySets' are lazy. The act of creating a QuerySet doesn't involve any database activity. You can stack filters together all day long, and Django won't actually run the query until the QuerySet is evaluated.
+'CSRF' (Cross-Site Request Forgery) protection is built into Django and works by checking for a secret token in every POST request.
+
+# --- SYSTEM & LOGIC ---
+'Edith' uses a Multi-Layered Prediction system to analyze programming queries.
+'Tfidf' stands for Term Frequency-Inverse Document Frequency, a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus.
+'Cosine Similarity' is a metric used to measure how similar the documents are irrespective of their size.
+'Machine Learning' allows Edith to predict the most relevant programming solution based on historical data.
+'Recursive Retrieval' is when the AI searches its own memory repeatedly to find the best match.
+
+# --- PROGRAMMING BEST PRACTICES ---
+'DRY' (Don't Repeat Yourself) is a principle of software development aimed at reducing repetition of software patterns.
+'SOLID' is a mnemonic acronym for five design principles intended to make software designs more understandable, flexible, and maintainable.
+'KISS' (Keep It Simple, Stupid) is a design principle which states that most systems work best if they are kept simple rather than made complicated.
+
+# --- SECURITY & DATABASE ---
+'SQL Injection' is a web security vulnerability that allows an attacker to interfere with the queries that an application makes to its database.
+'Indexing' in a database is a data structure technique to quickly locate and access the data in a database table.
+'Normalization' is the process of organizing data in a database to reduce redundancy and improve data integrity.

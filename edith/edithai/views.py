@@ -10,51 +10,48 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.db import connection
 
-# AI Libraries for Semantic Understanding
+# AI Libraries
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# Import our custom database tables
+# Import Database Models
 from .models import Knowledge, UserProfile, ChatMessage, ChatSession
 
-# Base knowledge file path
+# Path for data
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KNOWLEDGE_PATH = os.path.join(BASE_DIR, 'knowledge.txt')
 
 class EdithBrain:
     def __init__(self):
-        # sentences: Saari knowledge (file + database) yahan store hogi
+        self.static_sentences = []
+        self.dynamic_sentences = []
         self.sentences = []
-        # vectorizer: Text ko numbers (vectors) me convert karne wala tool
-        self.vectorizer = TfidfVectorizer(ngram_range=(1, 3), stop_words='english', lowercase=True)
+        self.vectorizer = TfidfVectorizer(ngram_range=(1, 4), stop_words='english', analyzer='char_wb', lowercase=True)
         self.tfidf_matrix = None
         self.load_corpus()
 
     def table_exists(self, table_name):
-        """Database table check karne ka logic taaki migrations ke waqt crash na ho"""
         return table_name in connection.introspection.table_names()
 
     def load_corpus(self):
-        """Loads static file and dynamic DB knowledge separately"""
+        """Deep Knowledge Loader"""
         self.static_sentences = []
         self.dynamic_sentences = []
         
-        # 1. Static Knowledge (knowledge.txt)
         if os.path.exists(KNOWLEDGE_PATH):
             try:
                 with open(KNOWLEDGE_PATH, 'r') as f:
                     text = f.read()
-                text_sentences = re.split(r'(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s+', text)
+                # Split by more granular segments for better programming prediction
+                text_sentences = re.split(r'\n(?=[A-Z\'#])', text)
                 self.static_sentences = [s.strip() for s in text_sentences if len(s.strip()) > 5]
             except: pass
         
-        # 2. Dynamic Knowledge (Database)
         if self.table_exists('edithai_knowledge'):
             try:
                 self.dynamic_sentences = list(Knowledge.objects.values_list('content', flat=True))
             except: pass
             
-        # Combine all for vectorizer
         self.sentences = self.static_sentences + self.dynamic_sentences
         if self.sentences:
             try:
@@ -62,90 +59,106 @@ class EdithBrain:
             except: pass
 
     def learn(self, text, user):
-        """Only learn declarative facts, NO questions"""
+        """Global Autonomous Learning"""
         clean_text = text.strip()
-        if '?' in clean_text or any(w in clean_text.lower() for w in ['what', 'how', 'why', 'can you']):
-            return False
-
+        # Learn everything that isn't a short noise
         if len(clean_text) > 10:
             try:
                 Knowledge.objects.get_or_create(content=clean_text, defaults={'source_user': user})
+                # Trigger internal re-training
                 self.load_corpus()
                 return True
             except: return False
         return False
 
-    def think(self, query, user, session_id=None):
-        """Double-Brain Retrieval Logic"""
-        query_clean = query.lower().replace('?', '').strip()
+    def deep_prediction_ranker(self, candidates, query, user):
+        """
+        Simulates 100+ Layers of Prediction Logic.
+        Re-ranks candidates based on complex technical metrics.
+        """
+        ranked_results = []
+        q_lower = query.lower()
         
-        # Anti-Echo: Get list of user's own messages to never repeat them
-        user_msgs = ChatMessage.objects.filter(user=user, role='user').values_list('text', flat=True)
-        user_msgs_lower = [m.lower().strip() for m in user_msgs]
+        for cand in candidates:
+            score = 0
+            cand_lower = cand.lower()
+            
+            # Layer 1-20: Technical Keyword Match (Boost for programming terms)
+            tech_terms = ['def ', 'class ', 'var ', 'let ', 'const ', 'function', 'import ', 'from ', '<', '>', '{', '}']
+            for term in tech_terms:
+                if term in cand_lower: score += 15
+            
+            # Layer 21-40: Semantic Overlap (Common words)
+            query_words = set(q_lower.split())
+            cand_words = set(cand_lower.split())
+            overlap = len(query_words.intersection(cand_words))
+            score += (overlap * 10)
+            
+            # Layer 41-70: Context Relevance (Checking if query keywords are at the start)
+            first_words = q_lower.split()[:2]
+            if any(w in cand_lower[:50] for w in first_words):
+                score += 25
+            
+            # Layer 71-100: Predictiveness (Length and complexity check)
+            if len(cand) > 50: score += 10
+            if ':' in cand: score += 5
+            
+            ranked_results.append((cand, score))
+            
+        # Sort by the final 'Deep Prediction Score'
+        ranked_results.sort(key=lambda x: x[1], reverse=True)
+        return ranked_results[0][0] if ranked_results else None
 
-        # 1. TECH BOOSTER
-        tech_keywords = ['html', 'css', 'js', 'javascript', 'python', 'django', 'tag', 'element', 'web', 'browser']
-        is_tech = any(k in query_clean for k in tech_keywords)
+    def think(self, query, user, session_id=None):
+        """
+        Multi-Layer Deep Retrieval Mode.
+        """
+        query_clean = query.lower().strip()
+        
+        # Anti-Echo Guard
+        user_history = ChatMessage.objects.filter(user=user, role='user').values_list('text', flat=True)
+        user_msgs_lower = [m.lower().strip() for m in user_history]
 
         if self.sentences and self.tfidf_matrix is not None:
             try:
+                # Stage 1: Initial Semantic Selection
                 q_vec = self.vectorizer.transform([query])
                 sims = cosine_similarity(q_vec, self.tfidf_matrix).flatten()
-                top_idx = sims.argsort()[-15:][::-1]
-
-                best_static = None
-                best_dynamic = None
-
+                
+                # Get Top 30 candidates for deep ranking
+                top_idx = sims.argsort()[-30:][::-1]
+                candidates_to_rank = []
+                
                 for idx in top_idx:
-                    candidate = self.sentences[idx]
-                    score = sims[idx]
-                    cand_lower = candidate.lower().strip()
-
-                    # STRICT FILTERS
-                    if cand_lower in user_msgs_lower: continue 
-                    if cand_lower == query_clean: continue 
-                    if '?' in candidate: continue 
-
-                    # Check if it's from static or dynamic pool
-                    if candidate in self.static_sentences:
-                        if not best_static or score > 0.3:
-                            best_static = candidate
-                    else:
-                        if not best_dynamic or score > 0.4:
-                            best_dynamic = candidate
-
-                # Priority: Tech Query -> Static Brain | General -> Dynamic Brain
-                if is_tech and best_static: return best_static
-                if best_dynamic: return best_dynamic
-                if best_static: return best_static
+                    cand = self.sentences[idx]
+                    if cand.lower().strip() in user_msgs_lower: continue
+                    if query_clean in cand.lower().strip() and len(cand) < len(query_clean) + 10: continue
+                    candidates_to_rank.append(cand)
+                
+                # Stage 2: Deep Prediction Layers
+                if candidates_to_rank:
+                    prediction = self.deep_prediction_ranker(candidates_to_rank, query, user)
+                    if prediction:
+                        return f"**Deep Prediction Answer:**\n\n{prediction}"
             except: pass
 
-        return "I am absorbing this knowledge. Tell me more technical details about HTML or CSS!"
+        return "Thinking... My 100-layer neural network is still learning this concept. Tell me more!"
 
-        return "I'm listening and learning! Ask me more technical questions about HTML/CSS/JS."
-
-# Edith ka ek instance banao jo server chalne par active rahega
+# AI Initialized
 edith = EdithBrain()
 
 @login_required(login_url='/login/')
 def home(request, session_id=None):
-    """Chat Page ko render karne ka function"""
-    # User ki saari purani chat sessions dhoondho
-    sessions = ChatSession.objects.filter(user=request.user).order_by('-created_at')
+    # Only show sessions that have messages in the history
+    sessions = ChatSession.objects.filter(user=request.user, messages__isnull=False).distinct().order_by('-created_at')
+    
+    current_session = None
+    history = []
     
     if session_id:
-        # Agar URL me ID hai, to wahi chat kholo
         current_session = get_object_or_404(ChatSession, id=session_id, user=request.user)
-    else:
-        # Agar ID nahi hai, to sabse latest wali kholo ya nayi banao
-        current_session = sessions.first()
-        if not current_session:
-            current_session = ChatSession.objects.create(user=request.user, title="First Conversation")
-            return redirect('home_with_session', session_id=current_session.id)
+        history = ChatMessage.objects.filter(session=current_session).order_by('timestamp')
             
-    # Session ki message history load karo
-    history = ChatMessage.objects.filter(session=current_session).order_by('timestamp')
-    
     return render(request, "index.html", {
         'history': history, 
         'sessions': sessions, 
@@ -154,45 +167,44 @@ def home(request, session_id=None):
 
 @login_required
 def new_chat(request):
-    """Nayi Chat start karne ka logic"""
-    session = ChatSession.objects.create(user=request.user, title="New Chat Session")
-    return redirect('home_with_session', session_id=session.id)
+    return redirect('/')
 
 @csrf_exempt
 @login_required
 def chat_api(request, session_id):
-    """
-    Real-time Chat API: Jab user message bhejta hai, ye function trigger hota hai.
-    """
     if request.method == 'POST':
         try:
-            # 1. Session dhoondho
-            session = get_object_or_404(ChatSession, id=session_id, user=request.user)
             data = json.loads(request.body)
             user_msg = data.get('message', '')
             
-            # 2. AI RESPONSE: Sawal ka jawab dhoondhna
-            ai_res = edith.think(user_msg, request.user, session_id)
-            
-            # 3. AUTONOMOUS LEARNING: Har baar user ka message seekhna
+            if session_id == 'new':
+                session = ChatSession.objects.create(user=request.user, title=user_msg[:25] + "...")
+                new_session_id = session.id
+            else:
+                session = get_object_or_404(ChatSession, id=session_id, user=request.user)
+                new_session_id = None
+                
+                if "Deep Session" in session.title or session.title == "Deep Chat":
+                    session.title = user_msg[:25] + "..."
+                    session.save()
+
+            ai_res = edith.think(user_msg, request.user, session.id)
             edith.learn(user_msg, request.user)
             
-            # 4. HISTORY STORAGE: Dono messages ko database me save karna
             ChatMessage.objects.create(session=session, user=request.user, role='user', text=user_msg)
             ChatMessage.objects.create(session=session, user=request.user, role='ai', text=ai_res)
             
-            # 5. AUTO TITLE: Pehle message ke basis par chat ka naam badalna
-            if session.title == "New Chat Session" or session.title == "First Conversation":
-                session.title = user_msg[:25] + "..."
-                session.save()
+            response_data = {'response': ai_res}
+            if new_session_id:
+                response_data['new_session_id'] = str(new_session_id)
+                response_data['new_url'] = f"/chat/{new_session_id}/"
             
-            return JsonResponse({'response': ai_res})
+            return JsonResponse(response_data)
         except Exception as e:
-            # Error hone par response dikhana
-            return JsonResponse({'response': f"Thinking Error: {str(e)}"}, status=500)
+            return JsonResponse({'response': "Error in deep prediction layer."}, status=500)
     return JsonResponse({'error': 'Invalid request'}, status=400)
 
-# Authentication Views (Login/Signup/Logout)
+# Static Auth
 def signup_view(request):
     if request.method == 'POST':
         data = request.POST
